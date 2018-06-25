@@ -22,4 +22,17 @@ bower install chart.js
 bower install angular
 bower install angular-websocket
 
+- Configure your web server to use index_router.php for incoming requests
 
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteRule ^ index_router.php [L]
+
+Notes
+
+- There is no storage except on the blockchain
+- AngularJS is here for future capabilities, and could be removed with a bit of refactoring
+- Could easily be extended to store vote info, mostly just addresses to SmartObjects, in MongoDB 
