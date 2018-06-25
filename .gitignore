@@ -1,0 +1,10 @@
+composer/composer.lock
+composer/composer.phar
+composer/vendor/
+node_modules/
+package-lock.json
+smarty/compile/
+wwwroot/js/bundle.js
+wwwroot/node_modules/
+wwwroot/package-lock.json
+wwwroot/votes/bower_components/

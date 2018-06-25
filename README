@@ -1,0 +1,25 @@
+This is the project from the Blockchain Hackathon on June 22-24, 2018.
+
+It is of course a little hacky.
+
+To get it running you'll need to do the following:
+
+- Install composer and update the composer files in ./composer
+- Install npm and install the following packages
+
+npm install hash.js
+npm install elliptic
+npm install -g bower
+npm install -g browserify
+
+- With browserify installed, execute the following command:
+
+browserify main.js -o wwwroot/bundle.js
+
+- With bower installed, install the following:
+
+bower install chart.js
+bower install angular
+bower install angular-websocket
+
+

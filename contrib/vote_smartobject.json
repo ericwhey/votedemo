@@ -1,0 +1,19 @@
+{
+    "abstract":true,
+    "properties":{
+        "choices":["Choice 1","Choice 2","Choice 3"]
+    },
+    "methods": {
+        "vote": {
+            "arguments":{
+                "choice":"$choices"
+            },
+            "code": {
+                "method": "increment",
+                "arguments": {
+                    "variable": "votes[$choice]"
+                }
+            }
+        }
+    }
+}

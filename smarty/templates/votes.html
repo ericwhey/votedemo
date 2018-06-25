@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>COTR - Vote Demo</title>
+        <script src="/votes/bower_components/chart.js/dist/Chart.bundle.js"></script>
+        <script src="/votes/js/utils.js"></script>
+        <script src="/votes/bower_components/angular/angular.min.js"></script>
+        <script src="/votes/bower_components/angular-websocket/dist/angular-websocket.min.js"></script>
+        <script src="/votes/js/qrcode.min.js"></script>
+        <script src="/js/bundle.js"></script>
+        <script src="/js/app.js"></script>
+    </head>
+</html>
+<body ng-app="main" ng-controller="MyCtrl">
+    <div style="width:100%">
+        <span style="float:left;" id="qrcode"></span>
+        <div style="font-size:32px;">
+            <p style="font-size:48px;font-weight:300;padding-top:5px;">{literal}{{title}}{/literal}</p>
+            <p>To VOTE, scan the QRcode with your COTR wallet.</p>
+            <p>Choose from the choices provided and press Send.</p>
+        </div>
+    </div>
+    <div id="container" style="width: 100%;">
+        <canvas id="canvas"></canvas>
+    </div>
+    <h2>Create Vote</h2>
+    <h3>Title</h3> 
+    <input type="text" ng-model="newtitle"><br/>
+    <h4>Choices</h4>
+    <div ng-repeat="(i, choice) in choices track by $index">
+        <input type="text" ng-model="choices[i]">
+    </div>
+
+    <button ng-click="addChoice()">Add</button>
+    <button ng-click="create()">Create</button>
+
+    <div ng-show="address"><a target="_blank" href="/votes/cotr/{literal}{{address}}{/literal}">View</a></div>
+</body>
