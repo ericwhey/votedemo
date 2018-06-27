@@ -16,11 +16,14 @@ npm install -g browserify
 
 browserify main.js -o wwwroot/bundle.js
 
+(Note that .gitignore is set to ingore wwwroot/bundle.js since we generate it here)
+
 - With bower installed, install the following:
 
 bower install chart.js
 bower install angular
 bower install angular-websocket
+bower install kazuhikoarase/qrcode-generator
 
 - Configure your web server to use index_router.php for incoming requests
 
@@ -30,6 +33,15 @@ RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
 RewriteRule ^ index_router.php [L]
+
+- You'll need to create world writable directories in:
+
+smarty/compile
+smarty/cache
+
+- Point your browser at the following url (which is referencing a Smart-Object at cotr/vote):
+
+http://localhost/votes/cotr/vote
 
 Notes
 

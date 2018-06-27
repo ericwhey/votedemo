@@ -7,4 +7,4 @@ smarty/compile/
 wwwroot/js/bundle.js
 wwwroot/node_modules/
 wwwroot/package-lock.json
-wwwroot/votes/bower_components/
+wwwroot/bower_components/
